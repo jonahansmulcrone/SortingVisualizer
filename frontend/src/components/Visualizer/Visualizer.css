@@ -1,0 +1,16 @@
+.visualizer-container {
+    display: flex;
+    flex-grow: 1;
+    background-color: #2d404e;
+    color: #ffffff;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+}
+
+.array-bar {
+    background-color: white;
+    border: 1px solid #D0E3F9;
+    margin: 0 2px;
+    transition: height 0.3s ease, background-color 0.3s ease;
+}

@@ -1,0 +1,13 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content-container {
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  height: 100%;
+}
+
+

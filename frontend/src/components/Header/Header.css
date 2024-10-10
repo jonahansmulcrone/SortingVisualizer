@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'TitleFont';
+    src: url('../../assets/fonts/SheepingCats-929Z.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-shrink: 0;
+    background-color: #0e1b21;
+    color: #ffffff;
+    height: 80px;
+}
+
+/* HEADER LEFT */
+.header-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 25px;
+}
+
+.header-title {
+    font-family: 'TitleFont';
+    font-size: 28px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 25px;
+}
+
+.header-left-content {
+    font-family: 'Play', sans-serif;
+    font-weight: 500;
+}
+
+.github-icon {
+    cursor: pointer;
+}
+
+.github-icon a {
+    text-decoration: none;
+}
