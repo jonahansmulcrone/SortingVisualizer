@@ -6,7 +6,7 @@
 
 .content-container {
   display: grid;
-  grid-template-columns: 25% 1fr;
+  grid-template-columns: 20% 1fr;
   height: 100%;
 }
 
