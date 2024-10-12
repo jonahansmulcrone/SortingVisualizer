@@ -11,7 +11,7 @@ const Visualizer: React.FC<VisualizerProps> = ({ arraySize, onBeginSort, onSorti
     const [numsArray, setNumsArray] = useState<number[]>([]);
     const [sortingInProgress, setSortingInProgress] = useState(false);
 
-    const maxBarHeight = 600;
+    const maxBarHeight = 700;
 
     const generateNumsArray = (arrayLength: number) => {
         const shuffledArray = Array.from({ length: arrayLength }, (k, i) => i)
