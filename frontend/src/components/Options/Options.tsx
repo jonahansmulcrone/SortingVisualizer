@@ -19,6 +19,14 @@ const Options: React.FC<OptionsProps> = ({ arraySize, onArraySizeChange, onBegin
 
     return (
         <div className='options-container'>
+            <div className='algorithms-dropdown'>
+                <label>Select an Algorithm</label>
+                    <select name='algorithm' id='algorithm'>
+                        <option value='insertion-sort'>Insertion Sort</option>
+                        <option value='selection-sort'>Selection Sort</option>
+                        <option value='quick-sort'>Quick Sort</option>
+                    </select>
+            </div>
             <div className='begin-sort-button'>
                 <button onClick={handleBeginSort}>Begin Sorting!</button>
             </div>

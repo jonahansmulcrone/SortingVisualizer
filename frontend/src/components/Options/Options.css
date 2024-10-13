@@ -81,3 +81,15 @@ input[type="range"]::-webkit-slider-thumb {
 .sliders-wrapper {
     display: flex;
 }
+
+.algorithms-dropdown select {
+    padding: 5px 7px;
+    border-radius: 20px;
+}
+
+.algorithms-dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
