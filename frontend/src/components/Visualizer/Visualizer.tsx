@@ -30,37 +30,31 @@ const Visualizer: React.FC<VisualizerProps> = ({ arraySize, onBeginSort, onSorti
   const beginInsertionSort = () => {
     const arr = [...numsArray];
     let i = 1;
-    let j: number | undefined;
-    let key: number;
-
+  
     const sortInterval = setInterval(() => {
-      if (i < arr.length) {
-        if (j === undefined) {
-          key = arr[i];
-          j = i - 1;
-          setActiveIndex(i); 
-        }
-
-        if (j >= 0 && arr[j] > key) {
-          arr[j + 1] = arr[j];
-          setComparisonIndex(j);
-          j--;
-          setNumsArray([...arr]);
-        } else {
-          arr[j + 1] = key;
-          setNumsArray([...arr]);
-          setActiveIndex(i); 
-          i++;
-          j = undefined;
-          setComparisonIndex(null); 
-        }
-      } else {
+      if (i >= arr.length) {
         clearInterval(sortInterval);
         setActiveIndex(null);
         setSortingInProgress(false);
         onSortingComplete();
+        return;
       }
-    }, 100); 
+  
+      const key = arr[i];
+      let j = i - 1;
+  
+      while (j >= 0 && arr[j] > key) {
+        arr[j + 1] = arr[j];
+        setComparisonIndex(j);
+        j--;
+        setNumsArray([...arr]);
+      }
+      
+      arr[j + 1] = key;
+      setNumsArray([...arr]);
+      setActiveIndex(i);
+      i++;
+    }, 100);
   };
 
   useEffect(() => {
