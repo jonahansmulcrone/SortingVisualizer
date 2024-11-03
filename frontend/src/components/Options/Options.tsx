@@ -20,7 +20,7 @@ const Options: React.FC<OptionsProps> = ({ arraySize, onArraySizeChange, onBegin
     return (
         <div className='options-container'>
             <div className='algorithms-dropdown'>
-                <label>Select an Algorithm</label>
+                <label className='select-algorithm-label'>Select an Algorithm</label>
                     <select name='algorithm' id='algorithm'>
                         <option value='insertion-sort'>Insertion Sort</option>
                         <option value='selection-sort'>Selection Sort</option>
