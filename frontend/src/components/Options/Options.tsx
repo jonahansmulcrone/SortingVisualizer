@@ -25,6 +25,7 @@ const Options: React.FC<OptionsProps> = ({ arraySize, onArraySizeChange, onBegin
                         <option value='insertion-sort'>Insertion Sort</option>
                         <option value='selection-sort'>Selection Sort</option>
                         <option value='quick-sort'>Quick Sort</option>
+                        <option value='bubble-sort'>Bubble Sort</option>
                     </select>
             </div>
             <div className='begin-sort-button'>
