@@ -4,12 +4,17 @@ import Header from './components/Header/Header'
 import Visualizer from './components/Visualizer/Visualizer'
 import Options from './components/Options/Options'
 
-function App() {
+const App: React.FC = () => {
   const [arraySize, setArraySize] = useState<number>(10)
+  const [sortingSpeed, setSortingSpeed] = useState<number>(2)
   const [sortingInProgress, setSortingInProgress] = useState(false);
 
   const handleArraySizeChange = (size: number) => {
     setArraySize(size);
+  };
+
+  const handleSortingSpeedChange = (speed: number) => {
+    setSortingSpeed(speed);
   };
 
   const handleBeginSort = () => {
@@ -25,7 +30,7 @@ function App() {
     <div className='app-container'>
       <Header />
       <div className='content-container'>
-        <Options arraySize={arraySize} onArraySizeChange={handleArraySizeChange} onBeginSort={handleBeginSort} />
+        <Options arraySize={arraySize} onArraySizeChange={handleArraySizeChange} onBeginSort={handleBeginSort} onSpeedChange={handleSortingSpeedChange} />
         <Visualizer arraySize={arraySize} onBeginSort={sortingInProgress} onSortingComplete={handleSortingComplete}/>
       </div>
     </div>
