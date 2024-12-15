@@ -31,7 +31,7 @@ const App: React.FC = () => {
       <Header />
       <div className='content-container'>
         <Options arraySize={arraySize} onArraySizeChange={handleArraySizeChange} onBeginSort={handleBeginSort} onSpeedChange={handleSortingSpeedChange} />
-        <Visualizer arraySize={arraySize} onBeginSort={sortingInProgress} onSortingComplete={handleSortingComplete}/>
+        <Visualizer arraySize={arraySize} onBeginSort={sortingInProgress} sortingSpeed={sortingSpeed} onSortingComplete={handleSortingComplete}/>
       </div>
     </div>
   )

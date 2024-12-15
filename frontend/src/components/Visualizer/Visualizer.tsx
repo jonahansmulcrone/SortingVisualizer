@@ -4,10 +4,11 @@ import './Visualizer.css'
 interface VisualizerProps {
   arraySize: number;
   onBeginSort: boolean;
+  sortingSpeed: number;
   onSortingComplete: () => void;
 }
 
-const Visualizer: React.FC<VisualizerProps> = ({ arraySize, onBeginSort, onSortingComplete }) => {
+const Visualizer: React.FC<VisualizerProps> = ({ arraySize, onBeginSort, sortingSpeed, onSortingComplete }) => {
   const [numsArray, setNumsArray] = useState<number[]>([]);
   const [sortingInProgress, setSortingInProgress] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
