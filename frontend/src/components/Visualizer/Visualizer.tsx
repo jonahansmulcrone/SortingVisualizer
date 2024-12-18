@@ -55,7 +55,7 @@ const Visualizer: React.FC<VisualizerProps> = ({ arraySize, onBeginSort, sorting
       setNumsArray([...arr]);
       setActiveIndex(i);
       i++;
-    }, 100);
+    }, sortingSpeed);
   };
 
   useEffect(() => {

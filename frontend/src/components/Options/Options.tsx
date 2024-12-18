@@ -10,12 +10,15 @@ interface OptionsProps {
 
 const Options: React.FC<OptionsProps> = ({ arraySize, onArraySizeChange, onBeginSort, onSpeedChange }) => {
 
+    const SPEED_MULTIPLYER = 100;
+
     const handleSizeSliderChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         onArraySizeChange(Number(e.target.value));
     }
 
     const handleSpeedSliderChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        onSpeedChange(Number(e.target.value));
+        console.log(e.target.value)
+        onSpeedChange(Math.abs((Number(e.target.value) * SPEED_MULTIPLYER) - 1000));
     }
 
     const handleBeginSort = () => {
@@ -53,7 +56,7 @@ const Options: React.FC<OptionsProps> = ({ arraySize, onArraySizeChange, onBegin
                     <input
                         type='range'
                         min='1'
-                        max='5'
+                        max='10'
                         onChange={handleSpeedSliderChange} />
                 </label>
             </div>
