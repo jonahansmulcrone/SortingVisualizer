@@ -22,4 +22,4 @@ npm run dev
 - HTML5
 
 ## Author
-[Your Name](https://github.com/yourusername)
+[Your Name](https://github.com/jonahansmulcrone)
